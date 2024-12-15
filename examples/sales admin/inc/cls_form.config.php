@@ -1,7 +1,7 @@
 <?php
 // setup
 $this->css_path = "../css/admin.css";
-$this->css_print_path = "../css/admin_print.css";
+$this->css_print_path = "../css/print.css";
 $this->css_xls_path = "../css/admin_xls.css";
 $this->img_dir = "../images";
 $this->js_dir = "../js";
