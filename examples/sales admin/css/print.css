@@ -1,0 +1,6 @@
+body {
+	margin: 0 !important;
+}
+.noprint, input[type="button"], input[type="submit"] { 
+	display:none; 
+}

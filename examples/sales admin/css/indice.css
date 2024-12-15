@@ -1,0 +1,247 @@
+body {
+	margin-top: 130px !important;
+}
+title:before {
+	content: 'Verpro';
+}
+.disabled {
+	opacity: 0.2;
+	filter: grayscale(1) drop-shadow(-1px -1px 0px white);
+}
+/* Tab Menu */
+.tab {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px; 
+	width: 100%;
+	color: #DDDDDD;
+	background-color: #444444;
+}
+.tab div {
+	display: inline-block;
+	padding: 2px 10px;
+	color: #DDDDDD;
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+	font: 10pt Arial;
+	font-weight: bold;
+}
+.tab div:hover {
+	color: white;
+}
+.tab div.selected {
+	color: black;
+	background-color: #DFE8F3;
+	cursor: auto;
+}
+.tab > a, .tab > span, .tab > span > a {
+	line-height: 10pt;
+	padding: 2px 5px;
+	color: white;
+}
+a.btn:hover {
+	color: gold;
+	text-decoration: none;
+}
+/* Menu principal */
+td.icon_grp {
+	white-space: nowrap;
+	line-height: 100%;
+	padding: 2px;
+}
+td.icon_grp {
+	vertical-align: middle !important;
+}
+div.icon_container {
+	display: table-cell;
+	vertical-align: top;
+	white-space: normal;
+}
+div.icon_container > .menu {
+	display: none;
+	position: fixed;
+	/* top: 90px; */
+	background-color: #fafafa;
+	border: 1px solid black;
+	border-top: 0;
+	border-left-color: #fafafa;
+	margin-top:-2px;
+	margin-left:2px;
+}
+div.icon_container:hover > .menu {
+	display: block;
+}
+/* mouse over if has menu */
+div.icon_container:hover > div.icon_large.hasmenu:not(.disabled) {
+	background: rgba(255,255,247,1);
+	background: -moz-linear-gradient(top, rgb(255,254,243) 0%, rgb(255,247,218) 36%, rgb(255,241,197) 36%, rgb(255,240,194) 51%, rgb(192,167,118) 51%, rgb(192,167,118) 52%, rgb(255,242,202) 52%, rgb(255,242,202) 54%, rgb(255,212,85) 54%, rgb(255,232,159) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,247,1)), color-stop(51%, rgba(255,240,194,1)), color-stop(51%, rgba(192,167,118,1)), color-stop(56%, rgba(255,242,202,1)), color-stop(58%, rgba(255,231,147,1)), color-stop(100%, rgba(255,233,162,1)));
+	background: -webkit-linear-gradient(top, rgb(255,254,243) 0%, rgb(255,247,218) 36%, rgb(255,241,197) 36%, rgb(255,240,194) 51%, rgb(192,167,118) 51%, rgb(192,167,118) 52%, rgb(255,242,202) 52%, rgb(255,242,202) 54%, rgb(255,212,85) 54%, rgb(255,232,159) 100%);
+	background: -o-linear-gradient(top, rgb(255,254,243) 0%, rgb(255,247,218) 36%, rgb(255,241,197) 36%, rgb(255,240,194) 51%, rgb(192,167,118) 51%, rgb(192,167,118) 52%, rgb(255,242,202) 52%, rgb(255,242,202) 54%, rgb(255,212,85) 54%, rgb(255,232,159) 100%);
+	background: -ms-linear-gradient(top, rgb(255,254,243) 0%, rgb(255,247,218) 36%, rgb(255,241,197) 36%, rgb(255,240,194) 51%, rgb(192,167,118) 51%, rgb(192,167,118) 52%, rgb(255,242,202) 52%, rgb(255,242,202) 54%, rgb(255,212,85) 54%, rgb(255,232,159) 100%);
+	background: linear-gradient(to bottom, rgb(255,254,243) 0%, rgb(255,247,218) 36%, rgb(255,241,197) 36%, rgb(255,240,194) 51%, rgb(192,167,118) 51%, rgb(192,167,118) 52%, rgb(255,242,202) 52%, rgb(255,242,202) 54%, rgb(255,212,85) 54%, rgb(255,232,159) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffff7', endColorstr='#ffe9a2', GradientType=0 );
+	border-radius: 4px;
+	cursor: pointer;
+}
+/* mouse over if has not menu */
+div.icon_container:hover > div.icon_large:not(.hasmenu):not(.disabled), div.icon_small:not(.disabled):hover {
+	background: -moz-linear-gradient(top, rgba(255,253,223,1) 0%, rgba(255,231,147,1) 36%, rgba(255,215,80,1) 36%, rgba(255,233,162,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,253,223,1)), color-stop(36%, rgba(255,231,147,1)), color-stop(36%, rgba(255,215,80,1)), color-stop(100%, rgba(255,233,162,1)));
+	background: -webkit-linear-gradient(top, rgba(255,253,223,1) 0%, rgba(255,231,147,1) 36%, rgba(255,215,80,1) 36%, rgba(255,233,162,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,253,223,1) 0%, rgba(255,231,147,1) 36%, rgba(255,215,80,1) 36%, rgba(255,233,162,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,253,223,1) 0%, rgba(255,231,147,1) 36%, rgba(255,215,80,1) 36%, rgba(255,233,162,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,253,223,1) 0%, rgba(255,231,147,1) 36%, rgba(255,215,80,1) 36%, rgba(255,233,162,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffddf', endColorstr='#ffe9a2', GradientType=0 );
+	text-decoration: underline;
+	border-radius: 4px;
+	cursor: pointer;
+}
+div.icon_container:hover > div.icon_large:not(.disabled):before, div.icon_small:not(.disabled):hover:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+	border-style: solid;
+    border-radius: 4px;
+	border-width: 2px;
+    border-color: rgb(192,167,118);
+	pointer-events:none; /* allow click through elm */
+}
+div.icon_container:hover > div.icon_large:not(.disabled):after, div.icon_small:not(.disabled):hover:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    border-radius: 4px;
+	border-style: solid;
+	border-width: 2px 0 0 2px;
+    border-color: rgb(255,254,243) rgb(192,167,118) rgb(192,167,118) rgb(255,254,243);
+	pointer-events:none; /* allow click through elm */
+}
+div.icon_large {
+	font-size: 8pt;
+	overflow: hidden;
+	max-width: 65px;
+	min-width: 45px;
+	height: 64px;
+	line-height: 100%;
+	text-align: center;
+	text-align: middle;
+	padding: 0 2px;
+	position: relative; /* required to parse position:absolute on :before mouse over */
+}
+div.icon_large a {
+	line-height: 100%;
+}
+div.icon_large div {
+	width: 100%;
+	height: 100%;
+}
+div.icon_large div.img {
+	display: inline-block;
+	height: 35px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+div.icon_large div.img img {
+	vertical-align: middle;
+}
+div.icon_large div.img:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+div.icon_small {
+	display: block;
+	/* height: 22px; */
+	white-space: nowrap;
+	position: relative; /* required to parse position:absolute on :before mouse over */
+}
+div.icon_small a {
+	display: block;
+	padding: 3px 5px;
+	text-decoration: none;
+}
+div.icon_small a:hover {
+	text-decoration: none;
+}
+div.icon_small a * {
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 100%;
+}
+div.icon_small:not(.disabled):hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+div.icon_small:not(.disabled):hover a div {
+	text-decoration: underline;
+}
+div.icon_small .alt {
+	position: absolute;
+	top: 7px;
+	left: 12px;
+	z-index: 9999;
+	background-color: #adc4d9;
+	padding: 2px;
+	border-radius: 5px;
+	font-size: 7pt;
+}
+div.icon_small:hover .alt {
+	z-index: 10000;
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+}
+/* submenu */
+table.submenu {
+	border-spacing: 0;
+	border-spacing: 0;
+	font-family: Arial, Helvetica;
+	font-size: 7pt;
+}
+table.submenu td {
+	padding: 0;
+	vertical-align: middle !important;
+}
+table.submenu tr.ruler hr {
+	border-top-color: black;
+	border-bottom-color: white;
+}
+table.submenu td.icon {
+	background-color: #e5ecec;
+	text-align: center;
+	width: 20px;
+}
+table.submenu td.label {
+	cursor: pointer;
+	border-left: 1px solid #c5c5c5;
+	white-space: nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+table.submenu td.label > .text {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	width: 100%;
+}
+table.submenu td.label > div.submenu {
+	position: fixed;
+	display: none;
+	background-color: #fafafa;
+	border: 1px solid black;
+}
+table.submenu tr:not(.ruler):hover > td {
+	background-color: #3579B1;
+	color: white;
+}
+table.submenu tr:not(.ruler):hover > td > div.submenu {
+	display: inline-block;
+}
