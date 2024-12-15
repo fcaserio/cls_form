@@ -19,5 +19,5 @@ $form->add_label("products.product_name","Name");
 $form->add_label("products.product_price","Price");
 $form->set_label_numeric(2);
 4. Build:
-if (!isset($step)) $step = 1; /* after build with $step=1, the api will manage $step through each part of the process */
+if (!isset($step)) $step = 1; /* after build with $step=1, api will manage $step through each part of the process */
 $form->build($mode, $step); /* supports $mode="insert", $mode="update", $mode="delete", $mode="report" */
